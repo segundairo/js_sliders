@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Popup</title>
+   <style>
+      * {
+         padding: 0;
+         margin: 0;
+         box-sizing: border-box;
+      }
+
+      .container {
+         position: relative;
+         width: 100%;
+         height: 100vh;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background-color: #fff163;
+         transition: all .5s ease-in-out;
+         padding: 1rem;
+      }
+
+      .container .content {
+         /* position: relative; */
+         max-width: 800px;
+      }
+
+      .container .content h2 {
+         font-weight: 700;
+         margin-bottom: 1rem;
+         color: #333;
+      }
+
+      .container .content img {
+         max-width: 100%;
+         display: block;
+      }
+
+      .container#blur.active {
+         filter: blur(5px);
+         pointer-events: none;
+         user-select: none;
+      }
+
+      a {
+         display: inline-block;
+         text-decoration: none;
+         border: none;
+         cursor: pointer;
+         padding: 1rem 2rem;
+         outline: none;
+         border-radius: 5px;
+         background: #000;
+         color: #fff;
+         margin-top: 2rem;
+      }
+
+      #popup {
+         position: fixed;
+         top: 40%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         width: 600px;
+         padding: 50px;
+         box-shadow: 0 0 3em rgba(0, 0, 0, .3);
+         background:  #fff;
+         visibility: hidden;
+         opacity: 0;
+         transition: all .5s ease-in-out;
+      }
+
+      #popup.active {
+         visibility: visible;
+         opacity: .8;
+      }
+   </style>
+</head>
+<body>
+   <div class="container" id="blur">
+      <div class="content">
+         <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta commodi alias obcaecati, autem soluta repellendus totam et in aut mollitia.</h2>
+         <img src="./agriculture.jpg" alt="">
+         <a href="#" class="btn">Read More</a>
+      </div>
+   </div>
+   <div id="popup">
+      <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse!</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ducimus quas cum quaerat esse aut, nostrum autem numquam cumque nobis temporibus dicta deleniti possimus. Molestias sit voluptatibus ex eligendi pariatur!</p>
+      <a href="#" class="btn-popup" >Close</a>
+   </div>
+   <script src="popup.js"> 
+     
+   </script>
+</body>
+</html>

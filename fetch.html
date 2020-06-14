@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Fetch API</title>
+   <style>
+      body {
+         background: #ddd;
+         color: #000;
+         /* height: 100vh; */
+         width: 100vw;
+         display: grid;
+         place-items: center;
+      }
+      .container {
+         width: clamp(600px, 70vw, 1200px);
+         background: #fff;
+         min-height: 500px;
+         box-shadow: 0 0 3em rgba(0,0,0,.15);;
+         padding: 2rem;
+         display: grid;
+         place-items: center;
+         margin-top: 10vh;
+      }
+
+      .btn {
+         display: inline-block;
+         padding: 1rem 2em;
+         text-decoration: none;
+         border: none;
+         outline: none;
+         text-transform: uppercase;
+         background: #000000;
+         color: #eee;
+         border-radius: 5px;
+         transition: all .5s ease-in;
+         font-size: 1.2rem;
+
+      }
+      .btn:hover {
+         transform: scale(.95);
+      }
+      .btn + .btn {margin-left: 1rem;}
+      .output {
+         border: 2px solid #ccc;
+         padding: 2rem;
+      }
+   </style>
+</head>
+<body>
+   <div class="container">
+      <div>
+         <button  class="btn btn-one">get text</button>
+         <button class="btn btn-two">get json</button>
+         <button  class="btn btn-three">get api</button>
+         
+      </div>
+      <div id="output" >
+         
+      </div>
+   </div>
+   <!-- <script src="js/fetch-api.js"></script>
+   <script src="js/fetch-app.js"></script> -->
+   <!-- <script src="js/fetch-async.js"></script>
+    -->
+    <script src="js/fetch-async-api.js"></script>
+    <script src="js/fetch-async.js"></script>
+</body>
+</html>

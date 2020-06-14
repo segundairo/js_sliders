@@ -1,0 +1,150 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background: #8b94e7;
+   color: #222;
+}
+
+.container {
+   width: clamp(450px, 70vw, 650px);
+   margin: 10vh auto;
+   background: #dee1e4;
+   padding: 3rem 1rem;
+   box-shadow: 0 10px 3em rgba(0, 0,0,.18);;
+   border-radius: 10px;
+   position: relative;
+}
+
+.container.active {
+   user-select: none;
+   pointer-events: none;
+   filter: blur(1px);
+
+}
+
+img {
+   display: block;
+   width: 100px;
+   height: 100px;
+   margin: auto;
+}
+.city, .condition, .temp {
+   text-align: center;     
+}
+.city {
+   font-size: 1.8rem;
+   text-transform: uppercase;
+}
+.condition {
+   padding: .8rem;
+   font-size: 1.5rem;
+   text-transform: capitalize;
+   font-weight: 100;
+}
+.temp {
+   font-size: 1.2rem;
+   font-weight: 100;
+}
+
+.stats {
+   margin: 2rem;
+   background: #dee1e4; 
+   color :#222; 
+   
+}
+.stats li {
+   list-style: none;
+   padding: .8rem;
+   text-align: center;
+   border: 1px solid #ccc;
+   font-size: 1.2rem;
+   background: #fff;
+}
+
+.stats li:not(:first-child) {
+   margin-top: .5rem;
+}
+.btn {
+   padding: 1em 1.6em;
+   display: inline-block;   
+}
+
+.weather > div:last-child {
+   justify-content: center;
+   align-items: center;
+   display: flex;
+   margin: 1rem;
+}
+
+.popup {
+   width: 600px;
+   background: #ccc;
+   position: absolute;
+   top: 30%;
+   left:50%;
+   transform: translate(-50%, -50%);
+   display: block;
+   box-shadow: 0 10px 20px 20px rgba(0, 0,0,.18);
+}
+
+.popup.active {
+   display: none; 
+}
+.location {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-left: .5rem;
+   background: #777;
+   color: #ccc;
+   margin-bottom: 2rem;
+}
+.location button {
+   display: block;
+   padding: .5rem;
+   cursor: pointer;
+}
+
+.danger {
+   padding: .8rem;
+   color: #eee;
+   background: #c31;
+   font-size: 1.2rem;
+
+}
+
+form {
+    padding: 1rem 3rem; 
+    
+}
+
+label {
+   display: block;
+   margin-bottom: .5rem;
+}
+
+input[type='text'] {
+   width: 100%;
+   padding: .5rem;
+   margin-bottom: 1rem;
+   border: none;
+   outline: none;
+}
+
+form > div {
+   display: flex;
+   justify-content: center;
+   margin: 2rem 0 1rem;
+}
+
+form hr {
+   margin-top: 2rem;
+}
+
+.btn  + .btn {
+   margin-left: 1rem;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Weather API</title>
+   <link rel="stylesheet" href="/css/weather.css">
+</head>
+
+<body>
+   <div class="container">
+      <div class="weather">
+
+      </div>
+   </div>
+   <div class="popup active">
+      <div class="location">
+         <h2>Location</h2>
+         <button class="btn">X</button>
+      </div>
+      <form id="set_city" action="">
+         <label for="city">City</label>
+         <input type="text" name="" id="txtCity">
+         <!-- <label for="State">Country</label>
+         <input type="text" name="" id="txtCountry"> -->
+         <hr>
+         <div><input class="btn btn-city" type="submit" value="Save Changes">
+            <input class="btn btn-cancel" type="submit" value="cancel"></div>
+
+      </form>
+   </div>
+   <script src="js/weather-api.js"></script>
+   <script src="js/weather-storage.js"></script>
+   <script src="js/weather-ui.js"></script>
+
+   <script src="js/weather-app.js"></script>
+</body>
+
+</html>
